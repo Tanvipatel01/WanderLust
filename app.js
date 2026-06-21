@@ -61,7 +61,7 @@ store.on("error", (err) => {
 
 const sessionOptions = {
   store: store,
-  secret: process.env.SECRET || "mysupersecretcode",
+  secret: process.env.SECRET ,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -71,7 +71,9 @@ const sessionOptions = {
   },
 };
 
-
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 app.use(session(sessionOptions));
 app.use(flash());

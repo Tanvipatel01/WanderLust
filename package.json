@@ -1,4 +1,10 @@
 {
+"engines":{
+  "node":"v22.19.0"
+}
+}
+
+{
   "name": "majorproject",
   "version": "1.0.0",
   "description": "",
